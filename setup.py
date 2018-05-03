@@ -1,6 +1,6 @@
 """
 
-salt :  Copyright 2018, Blake Huber
+saci :  Copyright 2018, Blake Huber
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,14 +23,11 @@ import os
 import sys
 from setuptools import setup, find_packages
 from codecs import open
-import salt
+import saci
 
 
 requires = [
-    'Jinja2',
-    'pdfkit',
-    'MarkupSafe',
-    'PyYAML',
+    'boto3',
     'Pygments',
     'pytz',
     'xmltodict'
@@ -43,23 +40,22 @@ def read(fname):
 
 
 setup(
-    name='salt',
-    version=salt.__version__,
-    description='Security App Install & Configuration',
+    name='saci',
+    version=saci.__version__,
+    description='Security App Configuration & Installation',
     long_description=read('DESCRIPTION.rst'),
-    url='https://github.com/fstab50/salt',
-    author=salt.__author__,
-    author_email=salt.__email__,
+    url='https://github.com/fstab50/saci',
+    author=saci.__author__,
+    author_email=saci.__email__,
     license='Apache',
     classifiers=[
-        'Topic :: Documentation',
+        'Topic :: Security',
         'Development Status :: 4 - Beta',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'License :: OSI Approved :: Apache Software License',
-        'Operating System :: POSIX :: Linux',
-        'Operating System :: Microsoft :: Windows'
+        'Operating System :: POSIX :: Linux'
     ],
     keywords='security application installer',
     packages=find_packages(exclude=['docs', 'scripts', 'assets']),
@@ -67,8 +63,8 @@ setup(
     python_requires='>=3.4, <4',
     entry_points={
         'console_scripts': [
-            'salt=salt.cli:init_cli',
-            'saltconfig=salt.cli:option_configure'
+            'saci=saci.cli:init_cli',
+            'saciconfig=saci.cli:option_configure'
         ]
     },
     zip_safe=False

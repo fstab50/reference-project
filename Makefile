@@ -1,4 +1,4 @@
-PROJECT := salt
+PROJECT := saci
 CUR_DIR = $(shell pwd)
 PYTHON_VERSION := python3
 PYTHON3_PATH := $(shell which $(PYTHON_VERSION))
