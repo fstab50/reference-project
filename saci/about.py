@@ -11,9 +11,9 @@ Returns:
 
 import sys
 import datetime
-from salt.statics import PACKAGE, LICENSE
-from salt.colors import Colors
-from salt import __version__
+from saci.statics import PACKAGE, LICENSE
+from saci.colors import Colors
+from saci import __version__
 
 
 # copyright range thru current calendar year

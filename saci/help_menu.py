@@ -6,8 +6,8 @@ Help Menu
 
 """
 
-from salt.statics import PACKAGE, CONFIG_SCRIPT
-from salt.colors import Colors
+from saci.statics import PACKAGE, CONFIG_SCRIPT
+from saci.colors import Colors
 
 
 PKG_ACCENT = Colors.ORANGE
@@ -20,7 +20,7 @@ synopsis_cmd = (
     PARAM_ACCENT + '--operation ' + Colors.RESET + '[OPERATION]'
     )
 
-url_sc = Colors.URL + 'https://github.com/fstab50/salt' + Colors.RESET
+url_sc = Colors.URL + 'https://github.com/fstab50/saci' + Colors.RESET
 
 menu_body = Colors.BOLD + """
   DESCRIPTION""" + Colors.RESET + """

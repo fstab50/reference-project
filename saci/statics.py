@@ -17,9 +17,9 @@ Module Attributes:
 import os
 import inspect
 import logging
-from salt.script_utils import read_local_config, get_os, os_parityPath
-from salt import __version__
-import salt
+from saci.script_utils import read_local_config, get_os, os_parityPath
+from saci import __version__
+import saci
 
 logger = logging.getLogger(__version__)
 logger.setLevel(logging.INFO)
@@ -44,11 +44,11 @@ else:
     # section with appropriate pathnames
 
     # project
-    PACKAGE = 'salt'
+    PACKAGE = 'saci'
     LICENSE = 'Apache 2.0'
     LICENSE_DESC = 'Apache License Version 2.0'
-    version = salt.__version__
-    BASEDIR = os.path.dirname(salt.__file__)
+    version = saci.__version__
+    BASEDIR = os.path.dirname(saci.__file__)
     CIS_BENCHMARK_VERSION = '1.0'
 
     # config parameters
@@ -61,7 +61,7 @@ else:
     # logging parameters
     enable_logging = False
     log_mode = 'FILE'
-    log_filename = 'salt.log'
+    log_filename = 'saci.log'
     log_dir = user_home + '/' + 'logs'
     log_path = log_dir + '/' + log_filename
 

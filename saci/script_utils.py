@@ -24,8 +24,8 @@ import re
 import logging
 import inspect
 from pygments import highlight, lexers, formatters
-from salt.colors import Colors
-from salt import __version__
+from saci.colors import Colors
+from saci import __version__
 
 # globals
 MODULE_VERSION = '1.11'

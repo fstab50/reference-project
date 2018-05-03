@@ -1,6 +1,6 @@
 """
 Summary:
-    salt (python3) | Create PDF from xml, html
+    saci (python3) | Create PDF from xml, html
 
 Author:
     Blake Huber
@@ -25,18 +25,18 @@ import xmltodict
 import inspect
 import subprocess
 import pdfkit
-from salt.renderers import shortAnnotation, json2html
-from salt.colors import Colors
-from salt.help_menu import menu_body
-from salt.script_utils import export_json_object, stdout_message, debug_mode
-from salt.statics import PACKAGE, CONFIG_SCRIPT, local_config, BASEDIR
-from salt import about, loggers, __version__
+from saci.renderers import shortAnnotation, json2html
+from saci.colors import Colors
+from saci.help_menu import menu_body
+from saci.script_utils import export_json_object, stdout_message, debug_mode
+from saci.statics import PACKAGE, CONFIG_SCRIPT, local_config, BASEDIR
+from saci import about, loggers, __version__
 
 try:
-    from salt.oscodes_unix import exit_codes
+    from saci.oscodes_unix import exit_codes
     splitchar = '/'     # character for splitting paths (linux)
 except Exception:
-    from salt.oscodes_win import exit_codes    # non-specific os-safe codes
+    from saci.oscodes_win import exit_codes    # non-specific os-safe codes
     splitchar = '\\'    # character for splitting paths (window
 
 # static globals
