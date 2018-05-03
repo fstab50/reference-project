@@ -1,6 +1,6 @@
 """
 
-pdfgen :  Copyright 2018, Blake Huber
+salt :  Copyright 2018, Blake Huber
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ import os
 import sys
 from setuptools import setup, find_packages
 from codecs import open
-import pdfgen
+import salt
 
 
 requires = [
@@ -43,13 +43,13 @@ def read(fname):
 
 
 setup(
-    name='pdfgen',
-    version=pdfgen.__version__,
-    description='PDF Document Generation',
+    name='salt',
+    version=salt.__version__,
+    description='Security App Install & Configuration',
     long_description=read('DESCRIPTION.rst'),
-    url='https://github.com/fstab50/pdfgen',
-    author=pdfgen.__author__,
-    author_email=pdfgen.__email__,
+    url='https://github.com/fstab50/salt',
+    author=salt.__author__,
+    author_email=salt.__email__,
     license='Apache',
     classifiers=[
         'Topic :: Documentation',
@@ -61,14 +61,14 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Operating System :: Microsoft :: Windows'
     ],
-    keywords='pdf document generation reports xml json wkhtmltopdf',
+    keywords='security application installer',
     packages=find_packages(exclude=['docs', 'scripts', 'assets']),
     install_requires=requires,
     python_requires='>=3.4, <4',
     entry_points={
         'console_scripts': [
-            'pdfgen=pdfgen.cli:init_cli',
-            'pdfconfig=pdfgen.cli:option_configure'
+            'salt=salt.cli:init_cli',
+            'saltconfig=salt.cli:option_configure'
         ]
     },
     zip_safe=False
